@@ -7,7 +7,7 @@ Este projeto simula e compara as bandas de energia em um cristal unidimensional 
 
 ---
 
-## 📘 Objetivo
+## Objetivo
 
 Investigar como diferentes representações do potencial periódico afetam as bandas de energia de elétrons em um cristal 1D, visualizando:
 
@@ -17,7 +17,7 @@ Investigar como diferentes representações do potencial periódico afetam as ba
 
 ---
 
-## 📂 Estrutura do Código
+## Estrutura do Código
 
 ### 1. **Modelo com α nas diagonais secundárias**
 
@@ -46,14 +46,14 @@ Investigar como diferentes representações do potencial periódico afetam as ba
 
 ---
 
-## 📈 Plotagem dos Resultados
+## Plotagem dos Resultados
 
 - **Gráfico 1**: mostra as bandas de energia para diferentes valores de \( \alpha \) no modelo quase-livre.
 - **Gráfico 2**: compara as bandas obtidas com \( V(x) \) (linha cheia) e com α (linha tracejada) para um valor equivalente de acoplamento.
 
 ---
 
-## 🧠 Interpretação
+## Interpretação
 
 - O modelo com α é uma **simplificação**: só considera interações entre vetores de onda vizinhos.
 - A matriz \( V_{m,n} \) contém **mais estrutura**, com múltiplas diagonais preenchidas, e leva em conta a **forma espacial do potencial**.
