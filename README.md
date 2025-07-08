@@ -7,49 +7,43 @@ Este projeto simula e compara as bandas de energia em um cristal unidimensional 
 
 ## Objetivo
 
-Investigar como diferentes representações do potencial periódico afetam as bandas de energia de elétrons em um cristal 1D, visualizando:
+Investigar como diferentes representações do potencial periódico afetam as bandas de energia de elétrons em um cristal 1D.
 
-- Abertura de gaps nas bandas  
-- Largura das bandas permitidas  
-- Diferença entre um modelo aproximado (α) e um potencial realista \( V(x) \)
 
-## Estrutura do Código
+## Visualização das Figuras
 
-### 1. Modelo com α nas diagonais secundárias
+Abaixo estão os gráficos gerados a partir da simulação de bandas de energia em um cristal unidimensional com diferentes potenciais periódicos.
 
-- `build_hamiltonian_with_diag(k_value, alpha, num_G_vectors)`  
-  Constrói a matriz Hamiltoniana tridiagonal com termo cinético + acoplamento α entre vetores de onda adjacentes.
+### 1. Potencial Gaussiano Simples
 
-- `calculate_bands(alpha, num_G_vectors, k_points)`  
-  Para cada valor de \( k \), monta o Hamiltoniano e obtém os autovalores (energias).
+![Potencial Gaussiano Simples](potencial_simples.png)  
+Representa um potencial suave e localizado, centrado na origem.
 
-### 2. Modelo com potencial \( V(x) \)
+### 2. Bandas – Gaussiano Simples
 
-- `V_gauss(x, A, gamma)`  
-  Potencial gaussiano centrado em \( x=0 \), com amplitude \( A \) e largura \( \gamma \).
+![Bandas Simples](bandas_simples.png)  
+Mostra a estrutura de bandas resultante do potencial gaussiano simples. Gaps começam a surgir entre os níveis de energia.
 
-- `build_V_matrix_gauss(func_V, num_G_vectors, A, gamma)`  
-  Constrói a matriz \( V_{m,n} \) usando a equação:  
-  \[
-  V_{m,n} = \int_0^1 V(x) e^{-i2\pi(m-n)x} dx
-  \]
+### 3. Potencial Gaussiano Duplo
 
-- `build_hamiltonian_from_V(k, V_matrix, num_G_vectors)`  
-  Monta o Hamiltoniano completo \( H = T + V \), com termo cinético + matriz do potencial.
+![Potencial Gaussiano Duplo](potencial_duplo.png)  
+Dois picos gaussianos simétricos formam um potencial periódico mais elaborado.
 
-- `calculate_bands_with_V(V_matrix, num_G_vectors, k_points)`  
-  Calcula os autovalores (bandas) para cada valor de \( k \).
+### 4. Bandas – Gaussiano Duplo
 
-## Plotagem dos Resultados
+![Bandas Duplo](bandas_duplo.png)  
+Bandas mais complexas, com múltiplos gaps, causados pela maior simetria do potencial.
 
-- **Gráfico 1**: mostra as bandas de energia para diferentes valores de \( \alpha \) no modelo quase-livre.  
-- **Gráfico 2**: compara as bandas obtidas com \( V(x) \) (linha cheia) e com α (linha tracejada) para um valor equivalente de acoplamento.
+### 5. Modelo Tridiagonal com Alpha Constante
 
-## Interpretação
+![Bandas com α constante](bandas_4D.png)  
+Bandas obtidas com um modelo tridiagonal simples usando potencial constante \( \alpha \). Imita o comportamento de elétrons quase-livres.
 
-- O modelo com α é uma simplificação: só considera interações entre vetores de onda vizinhos.  
-- A matriz \( V_{m,n} \) contém mais estrutura, com múltiplas diagonais preenchidas, e leva em conta a forma espacial do potencial.
+### 6. Bandas 1D com Potencial Real (Fourier)
 
-Comparando os gráficos:
-- Diferenças podem aparecer nos gaps de energia e na curvatura das bandas.  
-- O modelo com \( V(x) \) permite observar efeitos mais sutis do potencial sobre os elétrons.
+![Bandas 1D – Fourier](bandas_1D_pgd.png)  
+Cálculo completo com potencial gaussiano duplo via matriz de Fourier. Mostra claramente a formação das bandas e lacunas de energia.
+
+
+
+
