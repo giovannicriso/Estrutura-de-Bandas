@@ -36,7 +36,7 @@ Bandas mais complexas, com múltiplos gaps, causados pela maior simetria do pote
 
 ### 5. Modelo Tridiagonal com Alpha Constante
 
-![Bandas com α constante](bandas_4D.png)  
+![Bandas com α constante](bandas_1D.png)  
 Bandas obtidas com um modelo tridiagonal simples usando potencial constante \( \alpha \). Imita o comportamento de elétrons quase-livres.
 
 ### 6. Bandas 1D com Potencial Real (Fourier)
